@@ -23,15 +23,15 @@ class: inverse, center, middle
 knitr::opts_chunk$set(echo = TRUE)
 library(magrittr)
 library(gt)
-# library(xaringanthemer)
-# style_mono_accent(
-#   base_color = "#1c5253",
-#   header_font_google = google_font("Yanone Kaffeesatz"),
-#   text_font_google   = google_font("Montserrat", "300", "300i"),
-#   code_font_google   = google_font("Fira Mono"),
-#   link_color = "#F99012"
-# )
 ```
+
+```{r}
+xaringanExtra::use_share_again()
+xaringanExtra::style_share_again(
+  share_buttons = c("none")
+)
+```
+
 name: scope
 # Scope for Today
 
