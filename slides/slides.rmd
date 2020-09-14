@@ -1,5 +1,5 @@
 ---
-title: "git Workflows with RStudio"
+title: "Git Workflows with RStudio"
 output:
   xaringan::moon_reader:
     css: ["slides_files/custom.css","default", "default-fonts"]
@@ -12,7 +12,7 @@ editor_options:
 ---
 name: title
 class: inverse, center, middle
-# <span style="color:#F99012;">git Workflows with RStudio</span>
+# <span style="color:#F99012;">Git Workflows with RStudio</span>
 <img src="slides_files/GitHub-Mark.png" height="120px"/>
 <img src="slides_files/rstudio_hex.png" height="125px"/>
 ### <span style="color:#F99012;">KATIE MASIELLO</span>
@@ -42,7 +42,7 @@ name: scope
 .right-column[
 * Essential Git / Github concept and vocabulary  
 
-* Basic git workflows in RStudio IDE  
+* Basic Git workflows in RStudio IDE  
 
 * Automated Deployment with RStudio Connect <br>(*aka how you look like a superhero*) <br> ![hero](slides_files/hero.gif)
 ]

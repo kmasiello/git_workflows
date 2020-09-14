@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>git Workflows with RStudio</title>
+    <title>Git Workflows with RStudio</title>
     <meta charset="utf-8" />
     <link href="slides_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="slides_files/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
@@ -17,7 +17,7 @@
 
 name: title
 class: inverse, center, middle
-# &lt;span style="color:#F99012;"&gt;git Workflows with RStudio&lt;/span&gt;
+# &lt;span style="color:#F99012;"&gt;Git Workflows with RStudio&lt;/span&gt;
 &lt;img src="slides_files/GitHub-Mark.png" height="120px"/&gt;
 &lt;img src="slides_files/rstudio_hex.png" height="125px"/&gt;
 ### &lt;span style="color:#F99012;"&gt;KATIE MASIELLO&lt;/span&gt;
@@ -58,7 +58,7 @@ name: scope
 .right-column[
 * Essential Git / Github concept and vocabulary  
 
-* Basic git workflows in RStudio IDE  
+* Basic Git workflows in RStudio IDE  
 
 * Automated Deployment with RStudio Connect &lt;br&gt;(*aka how you look like a superhero*) &lt;br&gt; ![hero](slides_files/hero.gif)
 ]
@@ -87,7 +87,7 @@ name: vocabulary
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#zlcbfrnurd .gt_table {
+#vlwobftlsu .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -112,7 +112,7 @@ name: vocabulary
   border-left-color: #D3D3D3;
 }
 
-#zlcbfrnurd .gt_heading {
+#vlwobftlsu .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -124,7 +124,7 @@ name: vocabulary
   border-right-color: #D3D3D3;
 }
 
-#zlcbfrnurd .gt_title {
+#vlwobftlsu .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -134,7 +134,7 @@ name: vocabulary
   border-bottom-width: 0;
 }
 
-#zlcbfrnurd .gt_subtitle {
+#vlwobftlsu .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -144,13 +144,13 @@ name: vocabulary
   border-top-width: 0;
 }
 
-#zlcbfrnurd .gt_bottom_border {
+#vlwobftlsu .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#zlcbfrnurd .gt_col_headings {
+#vlwobftlsu .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -165,7 +165,7 @@ name: vocabulary
   border-right-color: #D3D3D3;
 }
 
-#zlcbfrnurd .gt_col_heading {
+#vlwobftlsu .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -185,7 +185,7 @@ name: vocabulary
   overflow-x: hidden;
 }
 
-#zlcbfrnurd .gt_column_spanner_outer {
+#vlwobftlsu .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -197,15 +197,15 @@ name: vocabulary
   padding-right: 4px;
 }
 
-#zlcbfrnurd .gt_column_spanner_outer:first-child {
+#vlwobftlsu .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#zlcbfrnurd .gt_column_spanner_outer:last-child {
+#vlwobftlsu .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#zlcbfrnurd .gt_column_spanner {
+#vlwobftlsu .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -217,7 +217,7 @@ name: vocabulary
   width: 100%;
 }
 
-#zlcbfrnurd .gt_group_heading {
+#vlwobftlsu .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -239,7 +239,7 @@ name: vocabulary
   vertical-align: middle;
 }
 
-#zlcbfrnurd .gt_empty_group_heading {
+#vlwobftlsu .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -254,15 +254,15 @@ name: vocabulary
   vertical-align: middle;
 }
 
-#zlcbfrnurd .gt_from_md > :first-child {
+#vlwobftlsu .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#zlcbfrnurd .gt_from_md > :last-child {
+#vlwobftlsu .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#zlcbfrnurd .gt_row {
+#vlwobftlsu .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -281,7 +281,7 @@ name: vocabulary
   overflow-x: hidden;
 }
 
-#zlcbfrnurd .gt_stub {
+#vlwobftlsu .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -293,7 +293,7 @@ name: vocabulary
   padding-left: 12px;
 }
 
-#zlcbfrnurd .gt_summary_row {
+#vlwobftlsu .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -303,7 +303,7 @@ name: vocabulary
   padding-right: 5px;
 }
 
-#zlcbfrnurd .gt_first_summary_row {
+#vlwobftlsu .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -313,7 +313,7 @@ name: vocabulary
   border-top-color: #D3D3D3;
 }
 
-#zlcbfrnurd .gt_grand_summary_row {
+#vlwobftlsu .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -323,7 +323,7 @@ name: vocabulary
   padding-right: 5px;
 }
 
-#zlcbfrnurd .gt_first_grand_summary_row {
+#vlwobftlsu .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -333,11 +333,11 @@ name: vocabulary
   border-top-color: #D3D3D3;
 }
 
-#zlcbfrnurd .gt_striped {
+#vlwobftlsu .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#zlcbfrnurd .gt_table_body {
+#vlwobftlsu .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -346,7 +346,7 @@ name: vocabulary
   border-bottom-color: #D3D3D3;
 }
 
-#zlcbfrnurd .gt_footnotes {
+#vlwobftlsu .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -360,13 +360,13 @@ name: vocabulary
   border-right-color: #D3D3D3;
 }
 
-#zlcbfrnurd .gt_footnote {
+#vlwobftlsu .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#zlcbfrnurd .gt_sourcenotes {
+#vlwobftlsu .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -380,46 +380,46 @@ name: vocabulary
   border-right-color: #D3D3D3;
 }
 
-#zlcbfrnurd .gt_sourcenote {
+#vlwobftlsu .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#zlcbfrnurd .gt_left {
+#vlwobftlsu .gt_left {
   text-align: left;
 }
 
-#zlcbfrnurd .gt_center {
+#vlwobftlsu .gt_center {
   text-align: center;
 }
 
-#zlcbfrnurd .gt_right {
+#vlwobftlsu .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#zlcbfrnurd .gt_font_normal {
+#vlwobftlsu .gt_font_normal {
   font-weight: normal;
 }
 
-#zlcbfrnurd .gt_font_bold {
+#vlwobftlsu .gt_font_bold {
   font-weight: bold;
 }
 
-#zlcbfrnurd .gt_font_italic {
+#vlwobftlsu .gt_font_italic {
   font-style: italic;
 }
 
-#zlcbfrnurd .gt_super {
+#vlwobftlsu .gt_super {
   font-size: 65%;
 }
 
-#zlcbfrnurd .gt_footnote_marks {
+#vlwobftlsu .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="zlcbfrnurd" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="vlwobftlsu" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   
   
   <tbody class="gt_table_body">
