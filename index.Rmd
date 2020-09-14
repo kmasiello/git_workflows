@@ -1,0 +1,22 @@
+---
+title: "git workflows with RStudio"
+description: |
+  A short introduction to using git / GitHub with RStudio and RStudio Connect
+site: distill::distill_website
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+
+# Learn more about creating websites with Distill at:
+# https://rstudio.github.io/distill/website.html
+
+# Learn more about publishing to GitHub Pages at:
+# https://rstudio.github.io/distill/publish_website.html#github-pages
+
+```
+
+```{r embed-xaringan, echo=FALSE, fig.cap="[Slides](slides/slides.html)"}
+xaringanExtra::embed_xaringan(url = "slides/slides.html", ratio = "16:9")
+```

@@ -1,0 +1,123 @@
+---
+title: "git Workflows with RStudio"
+output:
+  xaringan::moon_reader:
+    css: ["slides_files/custom.css","default", "default-fonts"]
+    seal: false
+    nature:
+      highlightStyle: github
+      highlightLines: true
+editor_options: 
+  chunk_output_type: console
+---
+name: title
+class: inverse, center, middle
+# <span style="color:#F99012;">git Workflows with RStudio</span>
+<img src="slides_files/GitHub-Mark.png" height="120px"/>
+<img src="slides_files/rstudio_hex.png" height="125px"/>
+### <span style="color:#F99012;">KATIE MASIELLO</span>
+.large[RStudio Customer Success | 14 Sept 2020]
+
+---
+```{r setup, include=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(magrittr)
+library(gt)
+# library(xaringanthemer)
+# style_mono_accent(
+#   base_color = "#1c5253",
+#   header_font_google = google_font("Yanone Kaffeesatz"),
+#   text_font_google   = google_font("Montserrat", "300", "300i"),
+#   code_font_google   = google_font("Fira Mono"),
+#   link_color = "#F99012"
+# )
+```
+name: scope
+# Scope for Today
+
+.left-column[
+![](slides_files/20_min.png)
+
+]
+.right-column[
+* Essential Git / Github concept and vocabulary  
+
+* Basic git workflows in RStudio IDE  
+
+* Automated Deployment with RStudio Connect <br>(*aka how you look like a superhero*) <br> ![hero](slides_files/hero.gif)
+]
+
+---
+
+class: center, middle, inverse 
+<img src="slides_files/greg_tweet.png">
+
+
+---
+# EIKIFJB <span style = 'font-size: 70%;'>(*everything I know is from Jenny Bryan*)</span>
+
+.left-column[
+<br>
+![](slides_files/eikifjb.png)
+]
+.right-column[
+[![https://happygitwithr.com/](slides_files/happygitwithr.png)](https://happygitwithr.com/)
+[<span style='font-size: 120%;'>https://happygitwithr.com/ </span>](https://happygitwithr.com/)
+]
+---
+name: vocabulary 
+# Vocabulary
+```{r echo=FALSE, include=TRUE}
+vocabulary <- rbind(c("Git", "A version control system that lets you manage history and changes"),
+                    c("GitHub", "Online hosted version of your Git history so you and others can access it from any computer"),
+                    c("Local", "Your Computer"), 
+                    c("Remote", "An online version of your project"),
+                    c("Stage", "Preparing files for commit; this allows you to break up your changes into smaller, logical pieces for each commit"),
+                    c("Commit", "An annotated snapshot of your code; should be a (small) unit of work"),
+                    c("Master or Main", "The main stream or branch of all development work"),
+                    c("Branch", "A version/diversion of the master where you can add features, edit, etc. safely without affecting the Master"),
+                    c("Pull Request", "The action of requesting changes in a branch be reviewed for incorporation (merging) into the Master")
+                    ) %>% as.data.frame()
+gt(vocabulary) %>% 
+  tab_options(column_labels.hidden = TRUE) %>% 
+  data_color(columns = vars(V1), colors = "#F99012", apply_to = "text") %>% 
+  tab_style(style = list(cell_text(weight = "bold")), locations = list(cells_body(columns=vars(V1))))
+```
+---
+## Basic Workflow
+<img src="slides_files/workflow.png">
+  
+
+## Working with Branches
+<img src="slides_files/branches.png" width = "850px">
+---
+class: inverse, middle, left
+<br>
+<br>
+# <span style='font-size: 200%;'>DEMO</span>
+<br>
+<br>
+### with exercises left to reader: 
+* Introduce yourself to Git, [Chapter 7 Happy Git with R](https://happygitwithr.com/hello-git.html)
+* Cache credentials, [Chapter 10 Happy Git with R](https://happygitwithr.com/credential-caching.html)
+* Review Chapters 4-14 (*they’re really not long*)
+---
+# Git-Backed Deployment Resources
+* User documentation: https://docs.rstudio.com/connect/user/git-backed.html
+
+* Admin documentation: https://docs.rstudio.com/connect/admin/content-management.html#git-backed
+* Using git-backed deployment for development and prod: https://solutions.rstudio.com/2020/01/10/diffable-data-science-demo-with-bike-prediction/
+<center>
+<img src="slides_files/devtestprod.png", height="300px">
+</center>
+---
+    
+# Git Resources
+
+* Git workflows: 
+  * Happy Git and GitHub for the useR:  https://happygitwithr.com/
+
+* Git / Github best practices and use of Git in the RStudio IDE:
+  * This section of *R Packages*, by Wickham: http://r-pkgs.had.co.nz/git.html
+
+* Git cheat sheet:  https://education.github.com/git-cheat-sheet-education.pdf
