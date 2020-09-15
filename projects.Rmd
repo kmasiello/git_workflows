@@ -1,0 +1,15 @@
+---
+title: "Other Projects"
+description: |
+  Here are a few other resources I've been working on
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Pro Tips by RStudio Customer Success
+
+Tips and how tos to make the most out of your professional products... brought to you by RStudio Customer Success
+
+* [Creating Efficient Workflows with `pins` and RStudio Connect ](https://github.com/rstudio/cs_protips/raw/master/pins_in_rsc/protip_pins/protip_pins.pdf) (download PDF)
