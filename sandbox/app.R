@@ -10,11 +10,11 @@ ui <- fluidPage(
     titlePanel("Penguin Measurements"),
 
     sidebarLayout(
-        sidebarPanel(radioButtons(inputId = "species",
-                                  label = "Species",
-                                  choices = c("Adelie" = "Adelie",
-                                              "Chinstrap" = "Chinstrap",
-                                              "Gentoo" = "Gentoo"))),
+        sidebarPanel(radioButtons(inputId = "island",
+                                  label = "Island",
+                                  choices = c("Biscoe" = "Biscoe",
+                                              "Dream" = "Dream",
+                                              "Torgersen" = "Torgersen"))),
 
         # Show a plot of the generated distribution
         mainPanel(
@@ -27,11 +27,12 @@ ui <- fluidPage(
 server <- function(input, output) {
 
     output$distPlot <- renderPlot({
-        ggplot(data = filter(penguins, species == input$species), aes(x = flipper_length_mm, y = body_mass_g)) +
+        ggplot(data = filter(penguins, island == input$island), aes(x = flipper_length_mm, y = body_mass_g)) +
             geom_point(aes(color = species,
                            shape = species),
                        size = 2) +
-            scale_color_manual(values = c("darkorange","darkorchid","cyan4"))
+            scale_color_manual(values = c("darkorange","darkorchid","cyan4")) +
+            xlim(170,240) + ylim(2600,6400)
     })
 }
 
