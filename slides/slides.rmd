@@ -32,7 +32,6 @@ xaringanExtra::style_share_again(
 )
 ```
 
-name: scope
 # Scope for Today
 
 .left-column[
@@ -46,6 +45,7 @@ name: scope
 
 * Automated Deployment with RStudio Connect <br>(*aka how you look like a superhero*) <br> ![hero](slides_files/hero.gif)
 ]
+
 
 ---
 
@@ -70,6 +70,7 @@ name: vocabulary
 ```{r echo=FALSE, include=TRUE}
 vocabulary <- rbind(c("Git", "A version control system that lets you manage history and changes"),
                     c("GitHub", "Online hosted version of your Git history so you and others can access it from any computer"),
+                    c("Working Directory", "Where the file(s) you are working on are stored"),
                     c("Local", "Your Computer"), 
                     c("Remote", "An online version of your project"),
                     c("Stage", "Preparing files for commit; this allows you to break up your changes into smaller, logical pieces for each commit"),
@@ -81,8 +82,19 @@ vocabulary <- rbind(c("Git", "A version control system that lets you manage hist
 gt(vocabulary) %>% 
   tab_options(column_labels.hidden = TRUE) %>% 
   data_color(columns = vars(V1), colors = "#F99012", apply_to = "text") %>% 
+  tab_style(style = list(cell_text(size = "medium")), locations = cells_body(everything())) %>% 
   tab_style(style = list(cell_text(weight = "bold")), locations = list(cells_body(columns=vars(V1))))
 ```
+
+???
+Overall we need to consider three places:
+* Your working directory 
+* The local repository
+* The remote repository  
+
+This vocabulary describes these places and how we move from one place to the other.
+
+It's common to confuse your local working directory with your local repo because they live in more or less the same place.  In your Finder/Explorer window, you can see the evidence of your local repo if you show hidden files (Cmd + Shift + .  on Mac) and you'll reveal the .git folder and .gitignore file that overlay your working directory
 ---
 ## Basic Workflow
 <img src="slides_files/workflow.png">
@@ -90,6 +102,14 @@ gt(vocabulary) %>%
 
 ## Working with Branches
 <img src="slides_files/branches.png" width = "850px">
+???
+The mechanics of making a change, saving, staging, committing, and then pushing seems like a lot of steps to get something to GitHub but each of these actions is important.  
+The process of working on a file, deciding you like it and saving it in your working directory is somewhat analogous to the act of staging files and then committing them to your local repo.  
+As a best practice, think of commits as small bundles of work that you put into a box and seal up. These re the incremental changes or snapshots to your work.  
+Think of staging as putting the files you've modified into the box before you seal it up with tape (or commit it). Put the things that go together in the box; for clarity later, avoid throwing all your work into one big box. 
+Committing doesn't move our files or version history to GitHub.  That comes with a Push. 
+
+Branches let us and others work on the project without disturbing the main or master stream. When we are ready, we can merge our changes back in with a Pull Request.
 ---
 class: inverse, middle, left
 <br>
