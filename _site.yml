@@ -8,6 +8,8 @@ navbar:
   right:
     - text: "Home"
       href: index.html
+    - text: "Frequently used git commands"
+      href: cheatsheet.html
     - text: "Other Projects"
       href: projects.html
     - icon: fab fa-github
