@@ -10,20 +10,29 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Branches
 
-### Make new branch
+* Make new branch
 
-`git checkout -b branchName`
+  `git checkout -b branchName`
 
-### Switch branches
+* Switch branches
 
-`git checkout branchName`
+  `git checkout branchName`
+  
+* Clean up the list of branches in the RStudio list (remote branches I deleted still show)
+
+  `git fetch -p`
+  
+* Change default branch name from `master` to `main`:  
+  https://stevenmortimer.com/5-steps-to-change-github-default-branch-from-master-to-main/
 
 ## I need to switch from HTTPS to SSH or vice versa (again...)
 
-### What's my remote URL?
+* What's my remote URL?
 
-`git remote -v`
+  `git remote -v`
 
-### Changing the remote repository url
+* Changing the remote repository url
 
-`git remote set-url origin <paste url>` Note that `origin` is the nickname you give the remote
+  `git remote set-url origin <paste url>` Note that `origin` is the nickname you give the remote
+
+
