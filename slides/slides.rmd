@@ -12,11 +12,11 @@ editor_options:
 ---
 name: title
 class: inverse, center, middle
-# <span style="color:#F99012;">Git Workflows with RStudio</span>
+# .orange[Git Workflows with RStudio]
 <img src="slides_files/GitHub-Mark.png" height="120px"/>
 <img src="slides_files/rstudio_hex.png" height="125px"/>
-### <span style="color:#F99012;">KATIE MASIELLO</span>
-.large[RStudio Customer Success | 14 Sept 2020]
+### .rstudio-blue[KATIE MASIELLO]
+.large[RStudio Customer Success]
 
 ---
 ```{r setup, include=FALSE, warning=FALSE}
@@ -31,7 +31,6 @@ xaringanExtra::style_share_again(
   share_buttons = c("none")
 )
 ```
-
 # Scope for Today
 
 .left-column[
@@ -45,28 +44,35 @@ xaringanExtra::style_share_again(
 
 * Automated Deployment with RStudio Connect <br>(*aka how you look like a superhero*) <br> ![hero](slides_files/hero.gif)
 ]
+---
+class: center, middle
+
+# Why do we use git? 
+###.rstudio-blue[(or why should we?)]
+
+---
+class: inverse 
+#How's git going?
+.left-even-column[<img src="https://imgs.xkcd.com/comics/git.png">]
+
+.right-even-column[<img src="slides_files/greg_tweet.png" width = 100%>]  
 
 
 ---
-
-class: center, middle, inverse 
-<img src="slides_files/greg_tweet.png">
-
-
----
-# EIKIFJB <span style = 'font-size: 70%;'>(*everything I know is from Jenny Bryan*)</span>
+# EIKIFJB <span style = 'font-size: 80%;'>(*everything I know is from Jenny Bryan*)</span>
 
 .left-column[
 <br>
 ![](slides_files/eikifjb.png)
 ]
 .right-column[
-[![https://happygitwithr.com/](slides_files/happygitwithr.png)](https://happygitwithr.com/)
-[<span style='font-size: 120%;'>https://happygitwithr.com/ </span>](https://happygitwithr.com/)
-]
+![https://happygitwithr.com/](slides_files/happygitwithr.png)]
+
+**Start here** -> https://happygitwithr.com/
+
 ---
-name: vocabulary 
 # Vocabulary
+
 ```{r echo=FALSE, include=TRUE}
 vocabulary <- rbind(c("Git", "A version control system that lets you manage history and changes"),
                     c("GitHub", "Online hosted version of your Git history so you and others can access it from any computer"),
@@ -79,11 +85,11 @@ vocabulary <- rbind(c("Git", "A version control system that lets you manage hist
                     c("Branch", "A version/diversion of the master where you can add features, edit, etc. safely without affecting the Master"),
                     c("Pull Request", "The action of requesting changes in a branch be reviewed for incorporation (merging) into the Master")
                     ) %>% as.data.frame()
-gt(vocabulary) %>% 
-  tab_options(column_labels.hidden = TRUE) %>% 
-  data_color(columns = vars(V1), colors = "#F99012", apply_to = "text") %>% 
-  tab_style(style = list(cell_text(size = "medium")), locations = cells_body(everything())) %>% 
-  tab_style(style = list(cell_text(weight = "bold")), locations = list(cells_body(columns=vars(V1))))
+gt(vocabulary) %>%
+  tab_options(column_labels.hidden = TRUE) %>%
+  data_color(columns = c(V1), colors = "#4d8dc9", apply_to = "text") %>%
+  tab_style(style = list(cell_text(size = "medium")), locations = cells_body(everything())) %>%
+  tab_style(style = list(cell_text(weight = "bold")), locations = list(cells_body(columns=c(V1))))
 ```
 
 ???
@@ -96,12 +102,21 @@ This vocabulary describes these places and how we move from one place to the oth
 
 It's common to confuse your local working directory with your local repo because they live in more or less the same place.  In your Finder/Explorer window, you can see the evidence of your local repo if you show hidden files (Cmd + Shift + .  on Mac) and you'll reveal the .git folder and .gitignore file that overlay your working directory
 ---
-## Basic Workflow
-<img src="slides_files/workflow.png">
-  
-
+## Basic Workflows
+<img src="slides_files/workflow_v2.png" width = 100%>
+<br><br>
+`r emo::ji("bulb")` 
+*.rstudio-blue[**Working Directory**] is to .rstudio-blue[**File > Save**] as .rstudio-blue[**Staging Area**] is to .rstudio-blue[**Commit**]*
+---
 ## Working with Branches
-<img src="slides_files/branches.png" width = "850px">
+<img src="slides_files/branches_v2.png" width = 100%>
+<br><br>
+`r emo::ji("bulb")` Every commit points back to the preceding commit(s)   
+
+`r emo::ji("bulb")` Commits contains file system snapshots and metadata (i.e., author of the change, commit message, parent(s)) 
+
+*Excellent reference: https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell*
+
 ???
 The mechanics of making a change, saving, staging, committing, and then pushing seems like a lot of steps to get something to GitHub but each of these actions is important.  
 The process of working on a file, deciding you like it and saving it in your working directory is somewhat analogous to the act of staging files and then committing them to your local repo.  
@@ -109,35 +124,41 @@ As a best practice, think of commits as small bundles of work that you put into 
 Think of staging as putting the files you've modified into the box before you seal it up with tape (or commit it). Put the things that go together in the box; for clarity later, avoid throwing all your work into one big box. 
 Committing doesn't move our files or version history to GitHub.  That comes with a Push. 
 
-Branches let us and others work on the project without disturbing the main or master stream. When we are ready, we can merge our changes back in with a Pull Request.
+Branches let us and others work on the project without disturbing the main or master stream. When we are ready, we can merge our changes back in with a Pull Request.  
+
 ---
+# Helpful Reading
+
+Git implementation with RStudio 
+
+* Happy git with R: https://happygitwithr.com/  
+* This section of R Packages, by Wickham: http://r-pkgs.had.co.nz/git.html (Includes screen shots of git with the IDE)  
+
+Git in general
+* Version Control, from The Missing Semester of Your CS Education: https://missing.csail.mit.edu/2020/version-control/
+* Pro Git book (online): https://git-scm.com/book/en/v2
+* Git cheat sheet: https://education.github.com/git-cheat-sheet-education.pdf
+
+---
+# Git-Backed Deployment Resources
+<center>
+<img src="slides_files/devtestprod.png", height="300px">
+</center>
+
+.smaller[* User documentation: https://docs.rstudio.com/connect/user/git-backed/
+* Admin documentation: https://docs.rstudio.com/connect/admin/content-management/git-backed/
+* Using git-backed deployment for development and prod: https://solutions.rstudio.com/misc/diffable-data-science-demo-with-bike-prediction/
+* Publishing to RStudio Connect with Github Actions: https://solutions.rstudio.com/data-science-admin/deploy/github-actions/]
+
+---
+name: demo
 class: inverse, middle, left
 <br>
 <br>
-# <span style='font-size: 200%;'>DEMO</span>
+# <span style='font-size: 200%;'>Demo Time!</span>
 <br>
 <br>
 ### with exercises left to reader: 
 * Introduce yourself to Git, [Chapter 7 Happy Git with R](https://happygitwithr.com/hello-git.html)
 * Cache credentials, [Chapter 10 Happy Git with R](https://happygitwithr.com/credential-caching.html)
 * Review Chapters 4-14 (*they’re really not long*)
----
-# Git-Backed Deployment Resources
-* User documentation: https://docs.rstudio.com/connect/user/git-backed.html
-
-* Admin documentation: https://docs.rstudio.com/connect/admin/content-management.html#git-backed
-* Using git-backed deployment for development and prod: https://solutions.rstudio.com/2020/01/10/diffable-data-science-demo-with-bike-prediction/
-<center>
-<img src="slides_files/devtestprod.png", height="300px">
-</center>
----
-    
-# Git Resources
-
-* Git workflows: 
-  * Happy Git and GitHub for the useR:  https://happygitwithr.com/
-
-* Git / Github best practices and use of Git in the RStudio IDE:
-  * This section of *R Packages*, by Wickham: http://r-pkgs.had.co.nz/git.html
-
-* Git cheat sheet:  https://education.github.com/git-cheat-sheet-education.pdf

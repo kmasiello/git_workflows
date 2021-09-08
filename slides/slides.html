@@ -3,6 +3,7 @@
   <head>
     <title>Git Workflows with RStudio</title>
     <meta charset="utf-8" />
+    <script src="slides_files/header-attrs-2.9/header-attrs.js"></script>
     <link href="slides_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="slides_files/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
     <script src="slides_files/clipboard-2.0.6/clipboard.min.js"></script>
@@ -17,14 +18,13 @@
 
 name: title
 class: inverse, center, middle
-# &lt;span style="color:#F99012;"&gt;Git Workflows with RStudio&lt;/span&gt;
+# .orange[Git Workflows with RStudio]
 &lt;img src="slides_files/GitHub-Mark.png" height="120px"/&gt;
 &lt;img src="slides_files/rstudio_hex.png" height="125px"/&gt;
-### &lt;span style="color:#F99012;"&gt;KATIE MASIELLO&lt;/span&gt;
-.large[RStudio Customer Success | 14 Sept 2020]
+### .rstudio-blue[KATIE MASIELLO]
+.large[RStudio Customer Success]
 
 ---
-
 
 
 
@@ -41,33 +41,41 @@ class: inverse, center, middle
 
 * Automated Deployment with RStudio Connect &lt;br&gt;(*aka how you look like a superhero*) &lt;br&gt; ![hero](slides_files/hero.gif)
 ]
+---
+class: center, middle
+
+# Why do we use git? 
+###.rstudio-blue[(or why should we?)]
+
+---
+class: inverse 
+#How's git going?
+.left-even-column[&lt;img src="https://imgs.xkcd.com/comics/git.png"&gt;]
+
+.right-even-column[&lt;img src="slides_files/greg_tweet.png" width = 100%&gt;]  
 
 
 ---
-
-class: center, middle, inverse 
-&lt;img src="slides_files/greg_tweet.png"&gt;
-
-
----
-# EIKIFJB &lt;span style = 'font-size: 70%;'&gt;(*everything I know is from Jenny Bryan*)&lt;/span&gt;
+# EIKIFJB &lt;span style = 'font-size: 80%;'&gt;(*everything I know is from Jenny Bryan*)&lt;/span&gt;
 
 .left-column[
 &lt;br&gt;
 ![](slides_files/eikifjb.png)
 ]
 .right-column[
-[![https://happygitwithr.com/](slides_files/happygitwithr.png)](https://happygitwithr.com/)
-[&lt;span style='font-size: 120%;'&gt;https://happygitwithr.com/ &lt;/span&gt;](https://happygitwithr.com/)
-]
+![https://happygitwithr.com/](slides_files/happygitwithr.png)]
+
+**Start here** -&gt; https://happygitwithr.com/
+
 ---
-name: vocabulary 
 # Vocabulary
+
+<div id="nnsqgdpwsh" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#xfolcopdzg .gt_table {
+#nnsqgdpwsh .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -92,7 +100,7 @@ name: vocabulary
   border-left-color: #D3D3D3;
 }
 
-#xfolcopdzg .gt_heading {
+#nnsqgdpwsh .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -104,7 +112,7 @@ name: vocabulary
   border-right-color: #D3D3D3;
 }
 
-#xfolcopdzg .gt_title {
+#nnsqgdpwsh .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -114,23 +122,23 @@ name: vocabulary
   border-bottom-width: 0;
 }
 
-#xfolcopdzg .gt_subtitle {
+#nnsqgdpwsh .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
   padding-top: 0;
-  padding-bottom: 4px;
+  padding-bottom: 6px;
   border-top-color: #FFFFFF;
   border-top-width: 0;
 }
 
-#xfolcopdzg .gt_bottom_border {
+#nnsqgdpwsh .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#xfolcopdzg .gt_col_headings {
+#nnsqgdpwsh .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -145,7 +153,7 @@ name: vocabulary
   border-right-color: #D3D3D3;
 }
 
-#xfolcopdzg .gt_col_heading {
+#nnsqgdpwsh .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -165,7 +173,7 @@ name: vocabulary
   overflow-x: hidden;
 }
 
-#xfolcopdzg .gt_column_spanner_outer {
+#nnsqgdpwsh .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -177,27 +185,27 @@ name: vocabulary
   padding-right: 4px;
 }
 
-#xfolcopdzg .gt_column_spanner_outer:first-child {
+#nnsqgdpwsh .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#xfolcopdzg .gt_column_spanner_outer:last-child {
+#nnsqgdpwsh .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#xfolcopdzg .gt_column_spanner {
+#nnsqgdpwsh .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
   vertical-align: bottom;
   padding-top: 5px;
-  padding-bottom: 6px;
+  padding-bottom: 5px;
   overflow-x: hidden;
   display: inline-block;
   width: 100%;
 }
 
-#xfolcopdzg .gt_group_heading {
+#nnsqgdpwsh .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -219,7 +227,7 @@ name: vocabulary
   vertical-align: middle;
 }
 
-#xfolcopdzg .gt_empty_group_heading {
+#nnsqgdpwsh .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -234,15 +242,15 @@ name: vocabulary
   vertical-align: middle;
 }
 
-#xfolcopdzg .gt_from_md > :first-child {
+#nnsqgdpwsh .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#xfolcopdzg .gt_from_md > :last-child {
+#nnsqgdpwsh .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#xfolcopdzg .gt_row {
+#nnsqgdpwsh .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -261,7 +269,7 @@ name: vocabulary
   overflow-x: hidden;
 }
 
-#xfolcopdzg .gt_stub {
+#nnsqgdpwsh .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -273,7 +281,7 @@ name: vocabulary
   padding-left: 12px;
 }
 
-#xfolcopdzg .gt_summary_row {
+#nnsqgdpwsh .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -283,7 +291,7 @@ name: vocabulary
   padding-right: 5px;
 }
 
-#xfolcopdzg .gt_first_summary_row {
+#nnsqgdpwsh .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -293,7 +301,7 @@ name: vocabulary
   border-top-color: #D3D3D3;
 }
 
-#xfolcopdzg .gt_grand_summary_row {
+#nnsqgdpwsh .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -303,7 +311,7 @@ name: vocabulary
   padding-right: 5px;
 }
 
-#xfolcopdzg .gt_first_grand_summary_row {
+#nnsqgdpwsh .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -313,11 +321,11 @@ name: vocabulary
   border-top-color: #D3D3D3;
 }
 
-#xfolcopdzg .gt_striped {
+#nnsqgdpwsh .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#xfolcopdzg .gt_table_body {
+#nnsqgdpwsh .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -326,7 +334,7 @@ name: vocabulary
   border-bottom-color: #D3D3D3;
 }
 
-#xfolcopdzg .gt_footnotes {
+#nnsqgdpwsh .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -340,13 +348,13 @@ name: vocabulary
   border-right-color: #D3D3D3;
 }
 
-#xfolcopdzg .gt_footnote {
+#nnsqgdpwsh .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#xfolcopdzg .gt_sourcenotes {
+#nnsqgdpwsh .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -360,93 +368,75 @@ name: vocabulary
   border-right-color: #D3D3D3;
 }
 
-#xfolcopdzg .gt_sourcenote {
+#nnsqgdpwsh .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#xfolcopdzg .gt_left {
+#nnsqgdpwsh .gt_left {
   text-align: left;
 }
 
-#xfolcopdzg .gt_center {
+#nnsqgdpwsh .gt_center {
   text-align: center;
 }
 
-#xfolcopdzg .gt_right {
+#nnsqgdpwsh .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#xfolcopdzg .gt_font_normal {
+#nnsqgdpwsh .gt_font_normal {
   font-weight: normal;
 }
 
-#xfolcopdzg .gt_font_bold {
+#nnsqgdpwsh .gt_font_bold {
   font-weight: bold;
 }
 
-#xfolcopdzg .gt_font_italic {
+#nnsqgdpwsh .gt_font_italic {
   font-style: italic;
 }
 
-#xfolcopdzg .gt_super {
+#nnsqgdpwsh .gt_super {
   font-size: 65%;
 }
 
-#xfolcopdzg .gt_footnote_marks {
+#nnsqgdpwsh .gt_footnote_marks {
   font-style: italic;
+  font-weight: normal;
   font-size: 65%;
 }
 </style>
-<div id="xfolcopdzg" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<table class="gt_table">
   
   
   <tbody class="gt_table_body">
-    <tr>
-      <td class="gt_row gt_left" style="color: #F99012; font-size: medium; font-weight: bold;">Git</td>
-      <td class="gt_row gt_left" style="font-size: medium;">A version control system that lets you manage history and changes</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left" style="color: #F99012; font-size: medium; font-weight: bold;">GitHub</td>
-      <td class="gt_row gt_left" style="font-size: medium;">Online hosted version of your Git history so you and others can access it from any computer</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left" style="color: #F99012; font-size: medium; font-weight: bold;">Working Directory</td>
-      <td class="gt_row gt_left" style="font-size: medium;">Where the file(s) you are working on are stored</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left" style="color: #F99012; font-size: medium; font-weight: bold;">Local</td>
-      <td class="gt_row gt_left" style="font-size: medium;">Your Computer</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left" style="color: #F99012; font-size: medium; font-weight: bold;">Remote</td>
-      <td class="gt_row gt_left" style="font-size: medium;">An online version of your project</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left" style="color: #F99012; font-size: medium; font-weight: bold;">Stage</td>
-      <td class="gt_row gt_left" style="font-size: medium;">Preparing files for commit; this allows you to break up your changes into smaller, logical pieces for each commit</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left" style="color: #F99012; font-size: medium; font-weight: bold;">Commit</td>
-      <td class="gt_row gt_left" style="font-size: medium;">An annotated snapshot of your code; should be a (small) unit of work</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left" style="color: #F99012; font-size: medium; font-weight: bold;">Master or Main</td>
-      <td class="gt_row gt_left" style="font-size: medium;">The main stream or branch of all development work</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left" style="color: #F99012; font-size: medium; font-weight: bold;">Branch</td>
-      <td class="gt_row gt_left" style="font-size: medium;">A version/diversion of the master where you can add features, edit, etc. safely without affecting the Master</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left" style="color: #F99012; font-size: medium; font-weight: bold;">Pull Request</td>
-      <td class="gt_row gt_left" style="font-size: medium;">The action of requesting changes in a branch be reviewed for incorporation (merging) into the Master</td>
-    </tr>
+    <tr><td class="gt_row gt_left" style="color: #4D8DC9; font-size: medium; font-weight: bold;">Git</td>
+<td class="gt_row gt_left" style="font-size: medium;">A version control system that lets you manage history and changes</td></tr>
+    <tr><td class="gt_row gt_left" style="color: #4D8DC9; font-size: medium; font-weight: bold;">GitHub</td>
+<td class="gt_row gt_left" style="font-size: medium;">Online hosted version of your Git history so you and others can access it from any computer</td></tr>
+    <tr><td class="gt_row gt_left" style="color: #4D8DC9; font-size: medium; font-weight: bold;">Working Directory</td>
+<td class="gt_row gt_left" style="font-size: medium;">Where the file(s) you are working on are stored</td></tr>
+    <tr><td class="gt_row gt_left" style="color: #4D8DC9; font-size: medium; font-weight: bold;">Local</td>
+<td class="gt_row gt_left" style="font-size: medium;">Your Computer</td></tr>
+    <tr><td class="gt_row gt_left" style="color: #4D8DC9; font-size: medium; font-weight: bold;">Remote</td>
+<td class="gt_row gt_left" style="font-size: medium;">An online version of your project</td></tr>
+    <tr><td class="gt_row gt_left" style="color: #4D8DC9; font-size: medium; font-weight: bold;">Stage</td>
+<td class="gt_row gt_left" style="font-size: medium;">Preparing files for commit; this allows you to break up your changes into smaller, logical pieces for each commit</td></tr>
+    <tr><td class="gt_row gt_left" style="color: #4D8DC9; font-size: medium; font-weight: bold;">Commit</td>
+<td class="gt_row gt_left" style="font-size: medium;">An annotated snapshot of your code; should be a (small) unit of work</td></tr>
+    <tr><td class="gt_row gt_left" style="color: #4D8DC9; font-size: medium; font-weight: bold;">Master or Main</td>
+<td class="gt_row gt_left" style="font-size: medium;">The main stream or branch of all development work</td></tr>
+    <tr><td class="gt_row gt_left" style="color: #4D8DC9; font-size: medium; font-weight: bold;">Branch</td>
+<td class="gt_row gt_left" style="font-size: medium;">A version/diversion of the master where you can add features, edit, etc. safely without affecting the Master</td></tr>
+    <tr><td class="gt_row gt_left" style="color: #4D8DC9; font-size: medium; font-weight: bold;">Pull Request</td>
+<td class="gt_row gt_left" style="font-size: medium;">The action of requesting changes in a branch be reviewed for incorporation (merging) into the Master</td></tr>
   </tbody>
   
   
-</table></div>
+</table>
+</div>
 
 ???
 Overall we need to consider three places:
@@ -458,12 +448,21 @@ This vocabulary describes these places and how we move from one place to the oth
 
 It's common to confuse your local working directory with your local repo because they live in more or less the same place.  In your Finder/Explorer window, you can see the evidence of your local repo if you show hidden files (Cmd + Shift + .  on Mac) and you'll reveal the .git folder and .gitignore file that overlay your working directory
 ---
-## Basic Workflow
-&lt;img src="slides_files/workflow.png"&gt;
-  
-
+## Basic Workflows
+&lt;img src="slides_files/workflow_v2.png" width = 100%&gt;
+&lt;br&gt;&lt;br&gt;
+💡 
+*.rstudio-blue[**Working Directory**] is to .rstudio-blue[**File &gt; Save**] as .rstudio-blue[**Staging Area**] is to .rstudio-blue[**Commit**]*
+---
 ## Working with Branches
-&lt;img src="slides_files/branches.png" width = "850px"&gt;
+&lt;img src="slides_files/branches_v2.png" width = 100%&gt;
+&lt;br&gt;&lt;br&gt;
+💡 Every commit points back to the preceding commit(s)   
+
+💡 Commits contains file system snapshots and metadata (i.e., author of the change, commit message, parent(s)) 
+
+*Excellent reference: https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell*
+
 ???
 The mechanics of making a change, saving, staging, committing, and then pushing seems like a lot of steps to get something to GitHub but each of these actions is important.  
 The process of working on a file, deciding you like it and saving it in your working directory is somewhat analogous to the act of staging files and then committing them to your local repo.  
@@ -471,38 +470,44 @@ As a best practice, think of commits as small bundles of work that you put into 
 Think of staging as putting the files you've modified into the box before you seal it up with tape (or commit it). Put the things that go together in the box; for clarity later, avoid throwing all your work into one big box. 
 Committing doesn't move our files or version history to GitHub.  That comes with a Push. 
 
-Branches let us and others work on the project without disturbing the main or master stream. When we are ready, we can merge our changes back in with a Pull Request.
+Branches let us and others work on the project without disturbing the main or master stream. When we are ready, we can merge our changes back in with a Pull Request.  
+
 ---
+# Helpful Reading
+
+Git implementation with RStudio 
+
+* Happy git with R: https://happygitwithr.com/  
+* This section of R Packages, by Wickham: http://r-pkgs.had.co.nz/git.html (Includes screen shots of git with the IDE)  
+
+Git in general
+* Version Control, from The Missing Semester of Your CS Education: https://missing.csail.mit.edu/2020/version-control/
+* Pro Git book (online): https://git-scm.com/book/en/v2
+* Git cheat sheet: https://education.github.com/git-cheat-sheet-education.pdf
+
+---
+# Git-Backed Deployment Resources
+&lt;center&gt;
+&lt;img src="slides_files/devtestprod.png", height="300px"&gt;
+&lt;/center&gt;
+
+.smaller[* User documentation: https://docs.rstudio.com/connect/user/git-backed/
+* Admin documentation: https://docs.rstudio.com/connect/admin/content-management/git-backed/
+* Using git-backed deployment for development and prod: https://solutions.rstudio.com/misc/diffable-data-science-demo-with-bike-prediction/
+* Publishing to RStudio Connect with Github Actions: https://solutions.rstudio.com/data-science-admin/deploy/github-actions/]
+
+---
+name: demo
 class: inverse, middle, left
 &lt;br&gt;
 &lt;br&gt;
-# &lt;span style='font-size: 200%;'&gt;DEMO&lt;/span&gt;
+# &lt;span style='font-size: 200%;'&gt;Demo Time!&lt;/span&gt;
 &lt;br&gt;
 &lt;br&gt;
 ### with exercises left to reader: 
 * Introduce yourself to Git, [Chapter 7 Happy Git with R](https://happygitwithr.com/hello-git.html)
 * Cache credentials, [Chapter 10 Happy Git with R](https://happygitwithr.com/credential-caching.html)
 * Review Chapters 4-14 (*they’re really not long*)
----
-# Git-Backed Deployment Resources
-* User documentation: https://docs.rstudio.com/connect/user/git-backed.html
-
-* Admin documentation: https://docs.rstudio.com/connect/admin/content-management.html#git-backed
-* Using git-backed deployment for development and prod: https://solutions.rstudio.com/2020/01/10/diffable-data-science-demo-with-bike-prediction/
-&lt;center&gt;
-&lt;img src="slides_files/devtestprod.png", height="300px"&gt;
-&lt;/center&gt;
----
-    
-# Git Resources
-
-* Git workflows: 
-  * Happy Git and GitHub for the useR:  https://happygitwithr.com/
-
-* Git / Github best practices and use of Git in the RStudio IDE:
-  * This section of *R Packages*, by Wickham: http://r-pkgs.had.co.nz/git.html
-
-* Git cheat sheet:  https://education.github.com/git-cheat-sheet-education.pdf
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
