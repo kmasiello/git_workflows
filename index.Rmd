@@ -26,6 +26,12 @@ knitr::opts_chunk$set(echo = FALSE)
 -   Git / Github best practices and use of Git in the RStudio IDE:
 
     -   This section of *R Packages*, by Wickham: <http://r-pkgs.had.co.nz/git.html>
+    
+-  Dive deeper into the fundamentals of git: 
+
+     - Version Control, from The Missing Semester of Your CS Education: https://missing.csail.mit.edu/2020/version-control/
+     
+    -  Pro Git book (online): https://git-scm.com/book/en/v2
 
 ```{r embed-xaringan, echo=FALSE, fig.cap="[Slides](slides/slides.html)"}
 xaringanExtra::embed_xaringan(url = "slides/slides.html", ratio = "4:3")
