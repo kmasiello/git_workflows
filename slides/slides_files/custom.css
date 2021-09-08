@@ -1,4 +1,43 @@
+@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+@import url(https://fonts.googleapis.com/css2?family=PT+Serif&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body { font-family: 'Montserrat', sans-serif; }
+
 a, a > code {
   color: rgb(249, 144, 18);
   text-decoration: none;
 }
+
+h1 {
+  color: #F99012;
+}
+h2 {
+  color: #F99012;
+}
+
+.inverse{
+  background-color: #3A474E;
+  text-shadow: 0 0 0px #333;
+
+}
+
+.inverse h1, .inverse h2, .inverse h3 {
+  color: #F99012;
+}
+.left-even-column {
+  width: 50%;
+  float: left;
+}
+
+.right-even-column {
+  width: 50%;
+  float: right;
+}
+
+.rstudio-blue {color: #4d8dc9;}
+.orange {color: #F99012;}
+
+.smaller{font-size:smaller}
+
+.medium{font-size:medium}
