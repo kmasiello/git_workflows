@@ -50,10 +50,15 @@ class: center, middle
 # Why do we use git? 
 ###.rstudio-blue[(or why should we?)]
 
+???
+Commonly:  
+* out of control file naming  
+* it gets complicated beyond track changes in one file  
+* because we've been told its good for us
 ---
 class: inverse 
 #How's git going?
-.left-even-column[<img src="https://imgs.xkcd.com/comics/git.png">]
+.left-even-column[<img src="https://imgs.xkcd.com/comics/git.png"> .small[source: [xkcd](https://imgs.xkcd.com/comics/git.png)]]
 
 .right-even-column[<img src="slides_files/greg_tweet.png" width = 100%>]  
 
@@ -107,6 +112,16 @@ It's common to confuse your local working directory with your local repo because
 <br><br>
 `r emo::ji("bulb")` 
 *.rstudio-blue[**Working Directory**] is to .rstudio-blue[**File > Save**] as .rstudio-blue[**Staging Area**] is to .rstudio-blue[**Commit**]*
+
+???
+The mechanics of making a change, saving, staging, committing, and then pushing seems like a lot of steps to get something to GitHub but each of these actions is important.  
+The process of working on a file, deciding you like it and saving it in your working directory is somewhat analogous to the act of staging files and then committing them to your local repo.  
+As a best practice, think of commits as small bundles of work that you put into a box and seal up. These re the incremental changes or snapshots to your work.  
+Think of staging as putting the files you've modified into the box before you seal it up with tape (or commit it). Put the things that go together in the box; for clarity later, avoid throwing all your work into one big box. 
+Committing doesn't move our files or version history to GitHub.  That comes with a Push. 
+Once we have established a remote repository, it can be accessed by collaborators, or even yourself from another computer.  
+We get access to these remote files with various syncing processes as either a fetch or pull.
+And when we checkout a branch, it brings those files to our local working directory so we can work with them.
 ---
 ## Working with Branches
 <img src="slides_files/branches_v2.png" width = 100%>
@@ -118,12 +133,6 @@ It's common to confuse your local working directory with your local repo because
 *Excellent reference: https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell*
 
 ???
-The mechanics of making a change, saving, staging, committing, and then pushing seems like a lot of steps to get something to GitHub but each of these actions is important.  
-The process of working on a file, deciding you like it and saving it in your working directory is somewhat analogous to the act of staging files and then committing them to your local repo.  
-As a best practice, think of commits as small bundles of work that you put into a box and seal up. These re the incremental changes or snapshots to your work.  
-Think of staging as putting the files you've modified into the box before you seal it up with tape (or commit it). Put the things that go together in the box; for clarity later, avoid throwing all your work into one big box. 
-Committing doesn't move our files or version history to GitHub.  That comes with a Push. 
-
 Branches let us and others work on the project without disturbing the main or master stream. When we are ready, we can merge our changes back in with a Pull Request.  
 
 ---
