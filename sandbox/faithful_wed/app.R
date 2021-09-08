@@ -41,7 +41,7 @@ server <- function(input, output) {
         bins <- seq(min(x), max(x), length.out = input$bins + 1)
 
         # draw the histogram with the specified number of bins
-        hist(x, breaks = bins, col = 'palegreen4', border = 'white')
+        hist(x, breaks = bins, col = 'tomato', border = 'white')
     })
 }
 
