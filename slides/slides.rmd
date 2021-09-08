@@ -13,7 +13,7 @@ editor_options:
 name: title
 class: inverse, center, middle
 # .orange[Git Workflows with RStudio]
-<img src="slides_files/GitHub-Mark.png" height="120px"/>
+<img src="slides_files/Git-Icon-White.png" height="120px"/>
 <img src="slides_files/rstudio_hex.png" height="125px"/>
 ### .rstudio-blue[KATIE MASIELLO]
 .large[RStudio Customer Success]
