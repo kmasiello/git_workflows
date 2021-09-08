@@ -146,7 +146,7 @@ Git implementation with RStudio
 Git in general
 * Version Control, from The Missing Semester of Your CS Education: https://missing.csail.mit.edu/2020/version-control/
 * Pro Git book (online): https://git-scm.com/book/en/v2
-* GitHub cheat sheet: https://education.github.com/git-cheat-sheet-education.pdf
+* Git cheat sheet: https://education.github.com/git-cheat-sheet-education.pdf
 
 ---
 # Git-Backed Deployment Resources
